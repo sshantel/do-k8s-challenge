@@ -23,9 +23,7 @@ In K8s, a `context` is used to group access parameters under a name. The configu
 
 Install doctl, the official CLI for Digital Ocean API.
 
-`brew install doctl`
-
-`doctl auth init` prompts you to authenticate doctl for use with your DigitalOcean account.
+`brew install doctl`, then `doctl auth init`, which prompts you to authenticate doctl for use with your DigitalOcean account.
 
 # Step 4
 
