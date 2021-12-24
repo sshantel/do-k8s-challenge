@@ -32,8 +32,8 @@ https://cloud.digitalocean.com/account/api/tokens?
 
 Next, I configured my kubernetes cluster. In K8s, a `context` is used to group access parameters under a name. The configuration for every cluster will contain a stanza for contexts with cluster-specific values which look like this:
 
-`Cmd: $ doctl kubernetes cluster kubeconfig save k8s-1-21-5-do-0-sfo3-1640339365671
+```Cmd: $ doctl kubernetes cluster kubeconfig save k8s-1-21-5-do-0-sfo3-1640339365671
 Notice: Adding cluster credentials to kubeconfig file found in "/Users/CYip/.kube/config"
-Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671`
+Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671```
 
 Sometimes you may jump to using the `kubectl` command right away without configuring your cluster, which will give you ```No version set for command kubectl```
