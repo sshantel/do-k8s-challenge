@@ -1,8 +1,6 @@
 # do-k8s-challenge
 
-https://www.digitalocean.com/community/pages/kubernetes-challenge
-
-I chose the following Digital Ocean challenge:
+I chose the following [Digital Ocean challenge](https://www.digitalocean.com/community/pages/kubernetes-challenge):
 
 > Deploy a log monitoring system
 So your applications produce logs. Lots of logs. How are you supposed to analyze them? A common solution is to aggregate and analyze them using the ELK stack, alongside fluentd or fluentbit.
