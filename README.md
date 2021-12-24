@@ -17,8 +17,6 @@ Download/Connect to Kubernetes
 
 `brew install kubectl`
 
-In K8s, a `context` is used to group access parameters under a name. The configuration for every cluster will contain a stanza for contexts with cluster-specific values which look like this:
-
 # Step 3
 
 Install doctl, the official CLI for Digital Ocean API.
@@ -29,3 +27,13 @@ Install doctl, the official CLI for Digital Ocean API.
 
 Generate Personal Access Token
 https://cloud.digitalocean.com/account/api/tokens?
+
+# Step 5
+
+Next, I configured my kubernetes cluster. In K8s, a `context` is used to group access parameters under a name. The configuration for every cluster will contain a stanza for contexts with cluster-specific values which look like this:
+
+Cmd: $ doctl kubernetes cluster kubeconfig save k8s-1-21-5-do-0-sfo3-1640339365671
+Notice: Adding cluster credentials to kubeconfig file found in "/Users/CYip/.kube/config"
+Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671
+
+Sometimes you may jump to using the `kubectl` command right away without configuring your cluster, which will give you ```No version set for command kubectl```
