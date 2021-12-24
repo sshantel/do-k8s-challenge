@@ -30,7 +30,20 @@ https://cloud.digitalocean.com/account/api/tokens?
 
 # Step 5
 
-Next, I configured my kubernetes cluster. In K8s, a `context` is used to group access parameters under a name. The configuration for every cluster will contain a stanza for contexts with cluster-specific values which look like this:
+Often times, I use the `kubectl` command right away without configuring my cluster, which returns ```No version set for command kubectl```. I never fully understood why this happened, but now that I've configured my own cluster I finally understand! 
+
+In order to use kubectl, you must configure your cluster. In K8s, a `context` is used to group access parameters under a name. The configuration for every cluster will contain a stanza for contexts with cluster-specific values which look like this:
+
+
+```
+contexts:
+- context:
+    cluster: do-sfo2-example-cluster-01
+    user: do-sfo2-example-cluster-01-admin
+  name: do-sfo2-example-cluster-01
+current-context: do-sfo2-example-cluster-01
+```
+
 
 ```
 Cmd: $ doctl kubernetes cluster kubeconfig save k8s-1-21-5-do-0-sfo3-1640339365671
@@ -38,4 +51,3 @@ Notice: Adding cluster credentials to kubeconfig file found in "/Users/CYip/.kub
 Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671
 ```
 
-Sometimes you may jump to using the `kubectl` command right away without configuring your cluster, which will give you ```No version set for command kubectl```
