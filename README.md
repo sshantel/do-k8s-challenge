@@ -1,5 +1,7 @@
 # do-k8s-challenge
 
+https://www.digitalocean.com/community/pages/kubernetes-challenge
+
 I chose the following Digital Ocean challenge:
 
 > Deploy a log monitoring system
