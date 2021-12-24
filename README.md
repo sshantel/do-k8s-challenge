@@ -45,9 +45,13 @@ current-context: do-sfo2-example-cluster-01
 ```
 
 
+`doctl kubernetes cluster kubeconfig save <your_cluster_name>` automatically adds your config file to `~/.kube/config'
+
+
 ```
 Cmd: $ doctl kubernetes cluster kubeconfig save k8s-1-21-5-do-0-sfo3-1640339365671
 Notice: Adding cluster credentials to kubeconfig file found in "/Users/CYip/.kube/config"
 Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671
 ```
 
+Now you're all set to use kubectl!
