@@ -11,4 +11,6 @@ Create Kubernetes Cluster via [Digital Ocean's Control Panel](https://docs.digit
 
 # Step 2
 
-Connect to Kubernetes
+Download/Connect to Kubernetes
+
+`brew install kubectl`
