@@ -45,7 +45,7 @@ current-context: do-sfo2-example-cluster-01
 ```
 
 
-`doctl kubernetes cluster kubeconfig save <your_cluster_name>` automatically adds your config file to `~/.kube/config'
+`doctl kubernetes cluster kubeconfig save <your_cluster_name>` automatically adds your config file to `~/.kube/config`
 
 
 ```
