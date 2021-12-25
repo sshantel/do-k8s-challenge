@@ -25,8 +25,8 @@ Install doctl, the official CLI for Digital Ocean API.
 
 # Step 4
 
-Generate Personal Access Token
-https://cloud.digitalocean.com/account/api/tokens?
+Generate [Personal Access Token]
+(https://cloud.digitalocean.com/account/api/tokens)
 
 # Step 5
 
