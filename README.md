@@ -30,12 +30,6 @@ https://cloud.digitalocean.com/account/api/tokens?
 
 # Step 5
 
-Often times, I use the `kubectl` command right away without configuring my cluster, which returns ```No version set for command kubectl```. This is because you still need to add a `tool-versions` file in your folder.
-
-`touch .tool-versions`
-`vim .tool-versions`
-`kubectl 1.21.8` 
-
 In order to use kubectl, you must configure your cluster. In K8s, a `context` is used to group access parameters under a name. The configuration for every cluster will contain a stanza for contexts with cluster-specific values which look like this:
 
 
