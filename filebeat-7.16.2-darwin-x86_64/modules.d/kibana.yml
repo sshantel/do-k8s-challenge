@@ -5,10 +5,10 @@
   # Server logs
   log:
     enabled: true
-
+  access:
     # Set custom paths for the log files. If left empty,
     # Filebeat will choose the paths depending on your OS.
-    #var.paths:
+    var.paths: ["/var/log/kibana/access.log*"]
 
   # Audit logs
   audit:
