@@ -13,7 +13,6 @@ spec:
     metadata:
       labels:
         app: elasticsearch
-   . . .
     spec:
       containers:
       - name: elasticsearch
@@ -75,4 +74,4 @@ spec:
       storageClassName: do-block-storage
       resources:
         requests:
-          storage: 100Gi
+          storage: 100Gi       
