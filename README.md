@@ -32,6 +32,14 @@ Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671
 
 Now you're all set to use kubectl!
 
+
+
+
+
 # Contact Info
 Chantel Yip
 
+# Resources
+
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-an-elasticsearch-fluentd-and-kibana-efk-logging-stack-on-kubernetes
+- https://dev.to/amitsaha/how-to-set-up-log-forwarding-in-a-kubernetes-cluster-using-fluent-bit-3bgk
