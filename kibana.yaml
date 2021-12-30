@@ -10,6 +10,7 @@ spec:
   - port: 5601
   selector:
     app: kibana
+  type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -37,7 +38,7 @@ spec:
           requests:
             cpu: 100m
         env:
-          - name: ELASTICSEARCH_URL
+          - name: ELASTICSEARCH_HOSTS
             value: http://elasticsearch:9200
         ports:
         - containerPort: 5601
