@@ -32,12 +32,9 @@ Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671
 
 Now you're all set to use kubectl!
 
+Now onto the fun logging stuff! First, I created a namespace called `kube-logging`. Then, I create the ElasticSearch StatefulSet, which 
+manages the deployment and scaling of a set of pods. Elasticsearch is defined as a `Service` here, in the `kube-logging` namespace we just created. 
 
-
-
-
-# Contact Info
-Chantel Yip
 
 # Resources
 
