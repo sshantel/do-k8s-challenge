@@ -1,11 +1,10 @@
-### WIP!
-
-# do-k8s-challenge
-
+# Name of Project
 I chose the following [Digital Ocean challenge](https://www.digitalocean.com/community/pages/kubernetes-challenge):
 
 > Deploy a log monitoring system
 So your applications produce logs. Lots of logs. How are you supposed to analyze them? A common solution is to aggregate and analyze them using the ELK stack, alongside fluentd or fluentbit.
+
+# do-k8s-challenge 
 
 First, I created a Kubernetes Cluster via [Digital Ocean's Control Panel](https://docs.digitalocean.com/products/kubernetes/how-to/create-clusters/).
 
@@ -32,3 +31,7 @@ Notice: Setting current-context to do-sfo3-k8s-1-21-5-do-0-sfo3-1640339365671
 ```
 
 Now you're all set to use kubectl!
+
+# Contact Info
+Chantel Yip
+
