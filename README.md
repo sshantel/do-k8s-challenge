@@ -198,9 +198,29 @@ spec:
         
 ```
 
-![](imgs/kibana-pod.png)
+![](imgs/kibana-pod.png) 
 
+Although the project I chose focused on the EFK Stack, I played around a bit with Logstash as well. Logstash is part of the Elastic Stack along with Beats, Elasticsearch and Kibana. Logstash is a server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite stash, for example, Elastic! 
 
+Logstash has over 200 plugins, and you can write your own very easily as well. To begin with, I downloaded [Logstash] (https://www.elastic.co/downloads/logstash) and created a simple configuration file:
+
+```
+input { stdin { } }
+
+filter {
+  grok {
+    match => { "message" => "%{COMBINEDAPACHELOG}" }
+  }
+  date {
+    match => [ "timestamp" , "dd/MMM/yyyy:HH:mm:ss Z" ]
+  }
+}
+
+output {
+  elasticsearch { hosts => ["localhost:9200"] }
+  stdout { codec => rubydebug }
+}
+```
 
 
 
