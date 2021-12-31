@@ -146,6 +146,8 @@ spec:
       resources:
         requests:
           storage: 100Gi
+          
+![](imgs/es-clusters.png)
 
 Next, set up Kibana! Kibana is a visualization dashboard software for Elasticsearch. This is where we'll see the data come to play in their pretty dashboards! Kibana is defined as a `service` in the same namespace as Elastic Search above, `kube-logging`
 
@@ -195,7 +197,7 @@ spec:
         - containerPort: 5601
         
 ```
-
+![](imgs/kibana-pod.png)
 
 
 
