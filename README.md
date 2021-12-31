@@ -44,6 +44,26 @@ metadata:
   name: kube-logging
 ```
 
+Next, we create an Elasticsearch Cluster. We defined it as a `Service` called `elastic-search` in the same Namespace we created above.
+
+```
+kind: Service
+apiVersion: v1
+metadata:
+  name: elasticsearch
+  namespace: kube-logging
+  labels:
+    app: elasticsearch
+spec:
+  selector:
+    app: elasticsearch
+  clusterIP: None
+  ports:
+    - port: 9200
+      name: rest
+    - port: 9300
+      name: inter-node
+```
 
 
 
