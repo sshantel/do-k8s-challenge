@@ -41,7 +41,7 @@ metadata:
   name: kube-logging
 ```
 
-Next, we create an Elasticsearch Cluster. We defined it as a `Service` called `elastic-search` in the same Namespace we created above. Port 9200 is used for all API calls over HTTP. This includes search, aggregations, monitoring and anything else that uses a HTTP request. All client libraries will use this port to talk to Elasticsearch.
+Next, we create an Elasticsearch Cluster. It's defined as a `Service` called `elastic-search` in the same Namespace we created above. Port 9200 is used for all API calls over HTTP. This includes search, aggregations, monitoring and anything else that uses a HTTP request. All client libraries will use this port to talk to Elasticsearch.
 Port 9300 is a custom binary protocol used for communications between nodes in a cluster, like cluster updates, master elections, nodes joining/leaving, and shard allocation.
 
 ```
