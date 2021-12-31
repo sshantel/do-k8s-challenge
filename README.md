@@ -11,6 +11,8 @@ First, I created a Kubernetes Cluster via [Digital Ocean's Control Panel](https:
 Then, I download/connect to Kubernetes `brew install kubectl` and install doctl, the official CLI for Digital Ocean API. `brew install doctl`, then `doctl auth init`, which prompts you to authenticate doctl for use with your DigitalOcean account. Next, generate [Personal Access Token]
 (https://cloud.digitalocean.com/account/api/tokens)
 
+![](imgs/DO_k8s.png)
+
 In order to use kubectl in any cirumstance, you must configure your cluster. In K8s, a `context` is used to group access parameters under a name. The configuration for every cluster will contain a stanza for contexts with cluster-specific values which look like this:
 
 ```
@@ -34,6 +36,13 @@ Now you're all set to use kubectl!
 
 Now onto the fun logging stuff! First, I created a namespace called `kube-logging`. Then, I create the ElasticSearch StatefulSet, which 
 manages the deployment and scaling of a set of pods. Elasticsearch is defined as a `Service` here, in the `kube-logging` namespace we just created. 
+
+
+
+
+
+
+
 
 
 # Resources
