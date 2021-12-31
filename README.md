@@ -200,9 +200,9 @@ spec:
 
 ![](imgs/kibana-pod.png) 
 
-Although the project I chose focused on the EFK Stack, I played around a bit with Logstash as well. Logstash is part of the Elastic Stack along with Beats, Elasticsearch and Kibana. Logstash is a server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite stash, for example, Elastic! 
+Although the project I chose focused on the EFK Stack, I played around a bit with Logstash as well. Logstash is part of the Elastic Stack along with Beats, Elasticsearch and Kibana. It's a server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite stash, for example, Elastic! 
 
-Logstash has over 200 plugins, and you can write your own very easily as well. To begin with, I downloaded [Logstash] (https://www.elastic.co/downloads/logstash) and created a simple configuration file:
+Logstash has over 200 plugins, and you can write your own very easily as well. To begin with, I downloaded [Logstash] (https://www.elastic.co/downloads/logstash) and created a simple configuration file to grok logs and talk to Elastic Search, which lives on port 9200:
 
 ```
 input { stdin { } }
@@ -221,6 +221,12 @@ output {
   stdout { codec => rubydebug }
 }
 ```
+
+With my Kibana pod and es-clusters still running: `kubectl port-forward kibana-6ffbc96795-484lb 5601:5601 --namespace=kube-logging`, `kubectl port-forward es-cluster-0 9200:9200 --namespace=kube-logging`, I `cd logstash` then run `logstash -f logstash-simple.conf` in a separate window. 
+
+This prompts me to type in an input to send logs up to Kibana:
+
+![](imgs/logstash.png)
 
 
 
