@@ -222,11 +222,9 @@ output {
 }
 ```
 
-With my Kibana pod and es-clusters still running: 
-`kubectl port-forward kibana-6ffbc96795-484lb 5601:5601 --namespace=kube-logging` 
-`kubectl port-forward es-cluster-0 9200:9200 --namespace=kube-logging`
-`cd logstash`
-`logstash -f logstash-simple.conf` 
+With my Kibana pod and es-clusters still running, I run 
+`kubectl port-forward kibana-6ffbc96795-484lb 5601:5601 --namespace=kube-logging`, `kubectl port-forward es-cluster-0 9200:9200 --namespace=kube-logging`
+, `cd logstash`, `logstash -f logstash-simple.conf` 
 
 Since I included `input { stdin { } }` in my logstash-simple.config file, this prompts me to type in an input to send logs up to Kibana: 
 
