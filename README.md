@@ -20,13 +20,9 @@ contexts:
     user: do-sfo2-example-cluster-01-admin
   name: do-sfo2-example-cluster-01
 current-context: do-sfo2-example-cluster-01
-
+```
 
 ![](imgs/DO_k8s.png)
-
-
-
-```
 
 `doctl kubernetes cluster kubeconfig save <your_cluster_name>` automatically adds your config file to `~/.kube/config`
 
