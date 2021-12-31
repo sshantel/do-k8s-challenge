@@ -225,7 +225,7 @@ With my Kibana pod and es-clusters still running, I run
 
 Then I head over to `http://localhost:5601/` on my browser, which will eventually connect to Kibana. The "Discover" tab is where you'll be able to create index patterns for your logs. I named mine `logstash`.
 
-Since I included `input { stdin { } }` in my logstash-simple.config file, this prompts me to type in an input to send logs up to Kibana: 
+First, I sent a curl request to port 9200 with random words, and then I created a `.conf` file for Logstash to take in input. Since I included `input { stdin { } }` in my logstash-simple.config file, this prompts me to type in an input to send logs up to Kibana: 
 
 ![](imgs/logstash.png)
 
