@@ -37,6 +37,12 @@ Now you're all set to use kubectl!
 Now onto the fun logging stuff! First, I created a namespace called `kube-logging`. Then, I create the ElasticSearch StatefulSet, which 
 manages the deployment and scaling of a set of pods. Elasticsearch is defined as a `Service` here, in the `kube-logging` namespace we just created. 
 
+`kind: Namespace
+apiVersion: v1
+metadata:
+  name: kube-logging
+`
+
 
 
 
