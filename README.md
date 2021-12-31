@@ -226,11 +226,17 @@ With my Kibana pod and es-clusters still running, I run
 `kubectl port-forward kibana-6ffbc96795-484lb 5601:5601 --namespace=kube-logging`, `kubectl port-forward es-cluster-0 9200:9200 --namespace=kube-logging`
 , `cd logstash`, `logstash -f logstash-simple.conf` 
 
+Then I head over to `http://localhost:5601/` on my browser, which will eventually connect to Kibana. The "Discover" tab is where you'll be able to create index patterns for your logs. I named mine `logstash`.
+
 Since I included `input { stdin { } }` in my logstash-simple.config file, this prompts me to type in an input to send logs up to Kibana: 
 
 ![](imgs/logstash.png)
 
 ![](imgs/live_logging.png)
+
+Hooray! That's my ELK stack! I also played around a bit with Fluentd, which is part of the EFK stack. 
+
+This was a really fun project, and I can't wait to continue and enhance the logging (and play around with the visualization in Kibana!). Thanks Digital Ocean for this awesome opportunity to learn more about logging, k8s, and data visualization!
 
 
 # Resources
